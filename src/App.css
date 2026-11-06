@@ -1,0 +1,82 @@
+
+#root {
+  width: 100%;
+  text-align: center;
+}
+
+.camera-container {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.camera-screen {
+  width: 100%;
+  height: 350px;
+  background: #171727;
+  border: 2px solid #7655e8;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+}
+
+.camera-screen video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #7655e8;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #6040ce;
+}
+
+.camera-status {
+  color: #7655e8;
+}
+
+.camera-error {
+  color: #ff5555;
+}
+
+.camera-screen {
+  position: relative;
+  overflow: hidden;
+}
+
+.camera-screen video,
+.camera-screen canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  object-fit: contain;
+  transform: scaleX(-1);
+}
+
+.camera-screen canvas {
+  pointer-events: none;
+}
+
+.camera-screen p {
+  z-index: 2;
+}
+
+.camera-status {
+  margin-top: 15px;
+  color: #a78bfa;
+}
